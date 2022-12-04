@@ -1,2 +1,4 @@
 var http=require('http');
-http.createServer().listen(3000);
+var app=require('./app');
+
+http.createServer(app.handleRequest).listen(3000);

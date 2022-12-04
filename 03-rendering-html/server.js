@@ -3,10 +3,10 @@ var fs=require('fs');
 
 function onRequest(request,response){
     response.writeHead(200,{'Content-type':'text/html'});
-    fs.readFile('./render.html',null,function(error,data){
+    fs.readFile('03-rendering-html/render.html',null,function(error,data){
         if(error){
             response.writeHead(404);
-            response.write('File is not found');
+            response.write('File is not found :(');
         }else{
             response.write(data);
         }
@@ -14,4 +14,4 @@ function onRequest(request,response){
     });
 }
 
-http.createServer(onRequest).listen(8000);
+http.createServer(onRequest).listen(3000);

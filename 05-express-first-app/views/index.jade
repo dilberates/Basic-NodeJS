@@ -1,5 +1,16 @@
 extends layout
 
 block content
+
   h1= title
+  ul 
+  li Dilber
+  input(type="text").class-name#anyid
   p Welcome to #{title}
+
+  - var condition=true
+  if condition
+  - var anyArray =[1,2,3]
+  each value in anyArray 
+   p=value
+  p It's true
